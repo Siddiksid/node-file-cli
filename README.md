@@ -1,65 +1,76 @@
-JavaScript File Utilities CLI
-This is a simple Command Line Interface (CLI) tool for performing various file operations in JavaScript. It is built using the commander library.
+`# Node.js CLI File Utilities
 
-Installation
-First, ensure you have Node.jsand npm installed. Then, you can install the necessary dependencies by running:
+This is a simple command-line tool to handle some basic file utilities such as creating files, deleting files, inserting content into files, and reading file content.
 
-bash
-npm install
-Commands
-Make a New File
-To create a new file, use the mkfile command:
+## Features
 
-bash
-node cli mkfile
-Example:
+-   **Create a file**: Create a new file with a specific name.
+-   **Delete a file**: Remove a file by its name.
+-   **Insert content into a file**: Add content to an existing file.
+-   **Read file content**: Read and display the content of a file.
+-   **Optional Commands**: Speak, bark, praise, and GOT-related phrases.
 
-bash
-node cli mkfile a.txt
-Delete a File
-To delete a file, use the delfile command:
+## Installation
 
-bash
-node cli delfile
-Example:
+To use this CLI tool, make sure you have [Node.js](https://nodejs.org) installed. Then, clone the repository and run the following commands:
 
-bash
-node cli delfile a.txt
-Insert Content into a File
-To insert content into a file, use the insertfile command:
+```bash
+npm install` 
+
+## Commands
+
+### 1. `mkfile <file>`
+
+Creates a new file with the name provided if it does not already exist.
 
 bash
-node cli insertfile
-Example:
+
+`node cli mkfile a.txt` 
+
+If the file already exists, a message will inform you of that.
+
+### 2. `delfile <file>`
+
+Deletes a file with the provided name.
 
 bash
-node cli insertfile a.txt “This is some content.”
-Read Content from a File
-To read content from a file, use the readfile command:
+
+`node cli delfile a.txt` 
+
+If the file does not exist, an error message will be displayed.
+
+### 3. `insertfile <file> <content>`
+
+Insert the specified content into an existing file.
 
 bash
-node cli readfile
-Example:
+
+`node cli insertfile a.txt "New content to insert"` 
+
+If the file does not exist, it will display an error message.
+
+### 4. `readfile <file>`
+
+Reads and displays the content of the file.
 
 bash
-node cli readfile a.txt
-Fun Options
-This CLI also includes some fun options for outputting different phrases:
 
-—speak: Outputs “Talk to the Hand!!”
+`node cli readfile a.txt` 
 
-—bark: Outputs “Woof!!!! Woof!!!!”
+If the file does not exist, an error message will be displayed.
 
-—praise: Outputs “All hail the king!!!”
+### 5. Optional Commands
 
-—got: Outputs “The North Remembers”
+You can also use some fun phrases through the options:
 
-Example:
+-   `node cli --speak`
+-   `node cli --bark`
+-   `node cli --praise`
+-   `node cli --got`
 
-bash
-node cli —speak
-Version
-Current version: 0.8.0
+### Output Examples:
 
-Description
-This CLI tool provides various utilities for working with files in JavaScript. You can create new files, delete files, insert content into files, and read content from files. Additionally, there are some fun options for outputting different phrases.
+-   `--speak`: "Talk to the Hand!!"
+-   `--bark`: "Woof!!!! Woof!!!!"
+-   `--praise`: "All hail the king!!!"
+-   `--got`: "The North Remembers"
